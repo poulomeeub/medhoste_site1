@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedHoste — Healthcare Logistics Without Compromise | DFW</title>
+<meta name="description" content="HIPAA-compliant, chain-of-custody verified medical courier services across Dallas-Fort Worth. 24/7 STAT dispatch. No compromises.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --navy:#1B2B6B;
+  --navy2:#152258;
+  --navy-dark:#0e1a42;
+  --sky:#4DB8E8;
+  --sky2:#2fa8e0;
+  --sky-light:#7DCFF2;
+  --red:#D0021B;
+  --red2:#e8002d;
+  --green:#00b87a;
+  --white:#ffffff;
+  --bg:#ffffff;
+  --bg-soft:#F5F9FE;
+  --bg-mid:#EBF3FB;
+  --bg-navy:#F0F4FF;
+  --border:#D6E4F7;
+  --border-mid:#C0D6F0;
+  --border-dark:rgba(255,255,255,0.12);
+  --muted:#4A5E8A;
+  --muted2:#7A90B8;
+  --muted-light:#A8BDD8;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--navy);overflow-x:hidden;}
+
+/* ═══ EMERGENCY BAR ═══ */
+.ebar{
+  background:var(--red);
+  color:#fff;
+  text-align:center;
+  padding:9px 20px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  position:relative;
+  z-index:200;
+}
+.ebar::before{
+  content:'';
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(255,255,255,0.04) 40px,rgba(255,255,255,0.04) 41px);
+}
+.ebar a{color:#fff;font-weight:900;text-decoration:none;border-bottom:2px solid rgba(255,255,255,0.5);}
+.pulse-dot{display:inline-block;width:8px;height:8px;background:#fff;border-radius:50%;margin-right:10px;animation:pdot 1.2s ease-in-out infinite;}
+@keyframes pdot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.6);}}
+
+/* ═══ NAV ═══ */
+nav{
+  position:sticky;top:0;z-index:150;
+  background:#ffffff;
+  height:76px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 4%;
+  box-shadow:0 2px 20px rgba(27,43,107,0.1);
+  border-bottom:1px solid var(--border);
+}
+
+/* SVG LOGO */
+.logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo-icon{width:48px;height:48px;flex-shrink:0;}
+.logo-text-wrap{display:flex;flex-direction:column;line-height:1;}
+.logo-main{
+  font-family:'Barlow',sans-serif;
+  font-size:1.75rem;font-weight:800;
+  letter-spacing:-0.01em;
+  line-height:1;
+}
+.logo-main .med{color:var(--sky);}
+.logo-main .hoste{color:var(--navy);}
+.logo-sub{
+  font-family:'Barlow',sans-serif;
+  font-size:0.56rem;font-weight:700;
+  color:var(--navy);
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  margin-top:3px;
+}
+
+.nav-links{display:flex;align-items:center;gap:0;list-style:none;}
+.nav-links a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:0.82rem;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
+  padding:0 14px;height:76px;
+  display:flex;align-items:center;
+  border-bottom:3px solid transparent;
+  transition:all 0.2s;
+}
+.nav-links a:hover{color:var(--navy);border-bottom-color:var(--sky);}
+.nav-stat{
+  background:var(--red);
+  color:#fff!important;
+  border-bottom:3px solid transparent!important;
+  padding:10px 20px!important;
+  height:auto!important;
+  border-radius:3px;
+  margin-left:16px;
+  font-size:0.78rem!important;
+  letter-spacing:0.08em!important;
+}
+.nav-stat:hover{background:var(--red2)!important;transform:translateY(-1px);}
+
+/* ═══ HERO WITH VIDEO ═══ */
+.hero{
+  position:relative;
+  height:100vh;min-height:700px;max-height:900px;
+  display:flex;align-items:center;
+  overflow:hidden;
+}
+.video-wrap{
+  position:absolute;inset:0;
+  pointer-events:none;overflow:hidden;
+}
+.video-wrap iframe{
+  position:absolute;
+  top:50%;left:50%;
+  width:177.78vh;height:100vh;
+  min-width:100vw;min-height:56.25vw;
+  transform:translate(-50%,-50%);
+  border:none;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    105deg,
+    rgba(27,43,107,0.94) 0%,
+    rgba(27,43,107,0.86) 42%,
+    rgba(27,43,107,0.52) 72%,
+    rgba(27,43,107,0.15) 100%
+  );
+}
+.hero-stripe{
+  position:absolute;
+  left:0;top:0;bottom:0;width:5px;
+  background:linear-gradient(to bottom,var(--sky),var(--navy));
+}
+.hero-content{
+  position:relative;z-index:2;
+  padding:0 5%;
+  max-width:800px;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(77,184,232,0.18);border:1px solid rgba(77,184,232,0.45);
+  padding:6px 16px;border-radius:2px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.82rem;font-weight:700;letter-spacing:0.14em;
+  color:var(--sky-light);text-transform:uppercase;
+  margin-bottom:24px;
+}
+.hero-badge .dot{width:7px;height:7px;background:var(--sky);border-radius:50%;animation:pdot 1s infinite;}
+.hero h1{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(3.2rem,7vw,6.5rem);
+  font-weight:900;
+  line-height:0.95;
+  letter-spacing:-0.01em;
+  color:#fff;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.hero h1 .line2{
+  color:transparent;
+  -webkit-text-stroke:2px var(--sky-light);
+}
+.hero h1 .accent-word{color:var(--sky);}
+.hero-sub{
+  font-size:1.08rem;font-weight:400;
+  color:rgba(255,255,255,0.78);
+  max-width:520px;line-height:1.75;
+  margin:20px 0 36px;
+  border-left:3px solid var(--sky);
+  padding-left:18px;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-red{
+  background:var(--red);color:#fff;
+  padding:16px 36px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800;font-size:1.05rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border:none;cursor:pointer;
+  display:inline-flex;align-items:center;gap:10px;
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);
+  transition:all 0.25s;
+}
+.btn-red:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,0,45,0.4);}
+.btn-outline{
+  border:2px solid rgba(255,255,255,0.4);color:#fff;
+  padding:14px 32px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:1rem;
+  letter-spacing:0.08em;text-transform:uppercase;
+  text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:all 0.25s;
+}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+
+/* HERO STATS STRIP */
+/* hero-stats */
+.hero-stats{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(27,43,107,0.92);
+  backdrop-filter:blur(16px);
+  border-top:1px solid rgba(77,184,232,0.2);
+  display:flex;z-index:3;
+}
+.hero-stat{
+  flex:1;padding:18px 28px;
+  border-right:1px solid rgba(255,255,255,0.07);
+  display:flex;align-items:center;gap:14px;
+}
+.hero-stat:last-child{border-right:none;}
+.hs-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:2rem;font-weight:900;
+  color:var(--sky-light);
+  letter-spacing:-0.02em;
+  white-space:nowrap;
+}
+.hs-label{font-size:0.78rem;font-weight:500;color:rgba(255,255,255,0.55);line-height:1.4;text-transform:uppercase;letter-spacing:0.04em;}
+
+/* ═══ TRUST TICKER ═══ */
+.ticker{
+  background:var(--navy);
+  padding:14px 0;overflow:hidden;
+  border-bottom:3px solid var(--sky2);
+}
+.ticker-inner{
+  display:flex;gap:0;
+  animation:tick 28s linear infinite;
+  width:max-content;
+}
+.ticker-item{
+  display:flex;align-items:center;gap:10px;
+  padding:0 40px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.9rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(255,255,255,0.7);
+  border-right:1px solid rgba(255,255,255,0.1);
+  white-space:nowrap;
+}
+.ticker-item .ti{font-size:1.1rem;}
+.ticker-item b{color:var(--sky-light);}
+@keyframes tick{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ═══ SECTION STRUCTURE ═══ */
+.section{padding:90px 5%;}
+.section-alt{background:var(--bg-soft);}
+.section-dark{background:var(--navy);color:#fff;}
+.section-dark .section-sub{color:rgba(255,255,255,0.55);}
+.inner{max-width:1260px;margin:0 auto;}
+
+.section-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.78rem;font-weight:800;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--sky2);margin-bottom:14px;
+}
+.section-kicker::before{content:'';width:24px;height:2px;background:var(--sky2);}
+.section-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(2rem,4.5vw,3.6rem);
+  font-weight:900;letter-spacing:-0.01em;
+  text-transform:uppercase;line-height:1;
+  margin-bottom:16px;color:var(--navy);
+}
+.section-dark .section-title{color:#fff;}
+.section-sub{
+  font-size:1rem;font-weight:400;
+  color:var(--muted);max-width:580px;
+  line-height:1.8;
+}
+
+/* ═══ HOW IT WORKS — TIMELINE ═══ */
+.timeline{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0;margin-top:56px;
+  border:2px solid var(--navy);
+  position:relative;
+}
+.timeline::after{
+  content:'';position:absolute;
+  top:80px;left:33.33%;right:33.33%;
+  height:2px;background:var(--red);
+  z-index:1;
+}
+.tl-step{
+  padding:48px 36px 44px;
+  border-right:2px solid var(--navy);
+  position:relative;overflow:hidden;
+  transition:all 0.3s;
+}
+.tl-step:last-child{border-right:none;}
+.tl-step::before{
+  content:'';position:absolute;
+  bottom:0;left:0;width:100%;height:3px;
+  background:var(--red);transform:scaleX(0);
+  transform-origin:left;transition:transform 0.4s;
+}
+.tl-step:hover::before{transform:scaleX(1);}
+.tl-step:hover{background:var(--bg-mid);}
+.tl-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:5.5rem;font-weight:900;
+  color:rgba(27,43,107,0.05);
+  line-height:1;letter-spacing:-0.04em;
+  position:absolute;top:16px;right:24px;
+}
+.tl-icon{
+  width:60px;height:60px;
+  background:var(--navy);
+  border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;margin-bottom:20px;
+  position:relative;z-index:1;
+}
+.tl-step h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.4rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:0.04em;
+  margin-bottom:12px;color:var(--navy);
+}
+.tl-step p{font-size:0.9rem;color:var(--muted);line-height:1.8;}
+.tl-connector{
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;color:var(--sky);
+  position:absolute;right:-18px;top:78px;
+  background:#fff;width:32px;height:32px;
+  border:2px solid var(--sky);border-radius:50%;
+  z-index:5;font-weight:900;
+}
+
+/* ═══ SERVICES — DENSE GRID ═══ */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;background:var(--border);
+  border:2px solid var(--navy);
+  margin-top:56px;
+}
+.svc-card{
+  background:#fff;padding:40px 32px;
+  position:relative;overflow:hidden;
+  transition:all 0.3s;
+  cursor:pointer;
+}
+.svc-card::before{
+  content:'';position:absolute;
+  top:0;left:0;width:4px;height:100%;
+  background:linear-gradient(to bottom,var(--sky),var(--navy));
+  transform:scaleY(0);transform-origin:top;
+  transition:transform 0.35s;
+}
+.svc-card:hover::before{transform:scaleY(1);}
+.svc-card:hover{background:var(--bg-mid);transform:translateY(-3px);box-shadow:0 12px 40px rgba(27,43,107,0.1);}
+.svc-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px;}
+.svc-icon{
+  width:52px;height:52px;
+  background:var(--navy);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;flex-shrink:0;
+}
+.svc-tag{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.68rem;font-weight:800;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--red);
+  background:rgba(232,0,45,0.08);
+  padding:4px 10px;border-radius:2px;
+}
+.svc-card h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.25rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:0.03em;
+  margin-bottom:10px;color:var(--navy);
+}
+.svc-card p{font-size:0.88rem;color:var(--muted);line-height:1.8;margin-bottom:16px;}
+.svc-features{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.svc-features li{
+  font-size:0.8rem;color:var(--muted);
+  display:flex;align-items:center;gap:8px;
+}
+.svc-features li::before{content:'→';color:var(--sky);font-weight:700;}
+
+/* ═══ VIDEO SECTION ═══ */
+.video-section{padding:0;position:relative;background:var(--navy);}
+.video-section-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:520px;
+}
+.video-panel{position:relative;overflow:hidden;}
+.video-panel iframe{
+  width:100%;height:100%;
+  min-height:520px;
+  border:none;display:block;
+}
+.video-info{
+  padding:70px 60px;
+  display:flex;flex-direction:column;justify-content:center;
+  background:linear-gradient(135deg,var(--navy2),var(--navy));
+}
+.video-info .section-kicker{color:var(--sky-light);}
+.video-info .section-kicker::before{background:var(--sky);}
+.video-info .section-title{color:#fff;font-size:2.4rem;}
+.video-info p{color:rgba(255,255,255,0.6);font-size:0.95rem;line-height:1.85;margin-bottom:28px;}
+.video-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:32px;}
+.vs-box{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.07);
+  padding:20px 22px;
+}
+.vs-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:2rem;font-weight:900;
+  color:var(--sky-light);
+  letter-spacing:-0.02em;
+}
+.vs-label{font-size:0.75rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.06em;}
+
+/* ═══ WHY SECTION — SPLIT ═══ */
+.why-split{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.why-left .section-title{margin-bottom:12px;}
+.why-features{margin-top:36px;display:flex;flex-direction:column;gap:0;}
+.why-feat{
+  display:grid;grid-template-columns:56px 1fr;
+  gap:20px;align-items:start;
+  padding:24px 0;
+  border-bottom:1px solid var(--border);
+  transition:all 0.2s;
+}
+.why-feat:hover{padding-left:8px;}
+.why-feat:first-child{border-top:1px solid var(--border);}
+.wf-icon{
+  width:48px;height:48px;
+  background:var(--navy);
+  border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;flex-shrink:0;
+}
+.why-feat h4{
+  font-family:'Barlow Semi Condensed',sans-serif;
+  font-size:1rem;font-weight:700;
+  margin-bottom:5px;color:var(--navy);
+  text-transform:uppercase;letter-spacing:0.04em;
+}
+.why-feat p{font-size:0.87rem;color:var(--muted);line-height:1.75;}
+.why-right{display:flex;flex-direction:column;gap:2px;}
+.stat-block{
+  background:var(--navy);
+  padding:36px 32px;
+  position:relative;overflow:hidden;
+  border-left:4px solid transparent;
+  transition:border-color 0.3s;
+}
+.stat-block:hover{border-color:var(--sky-light);}
+.stat-block::after{
+  content:'';position:absolute;
+  right:24px;top:50%;transform:translateY(-50%);
+  width:60px;height:60px;
+  border:2px solid rgba(255,255,255,0.04);
+  border-radius:50%;
+}
+.sb-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:3.2rem;font-weight:900;
+  letter-spacing:-0.03em;
+  background:linear-gradient(135deg,var(--sky),var(--green));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;display:block;
+  margin-bottom:6px;
+}
+.sb-label{font-size:0.82rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;}
+.sb-desc{font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:4px;line-height:1.6;}
+
+/* ═══ COMPLIANCE — DARK GRID ═══ */
+.comp-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2px;background:rgba(255,255,255,0.05);
+  margin-top:56px;
+}
+.comp-card{
+  background:rgba(255,255,255,0.04);
+  padding:36px 28px;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:all 0.3s;
+  position:relative;overflow:hidden;
+}
+.comp-card::after{
+  content:'';position:absolute;
+  bottom:0;left:0;width:100%;height:2px;
+  background:linear-gradient(to right,var(--sky),var(--navy));
+  transform:scaleX(0);transition:transform 0.3s;
+}
+.comp-card:hover{background:rgba(255,255,255,0.06);}
+.comp-card:hover::after{transform:scaleX(1);}
+.comp-icon{font-size:2rem;margin-bottom:16px;}
+.comp-badge{
+  display:inline-block;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.65rem;font-weight:800;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--green);
+  background:rgba(0,201,122,0.12);
+  padding:3px 10px;border-radius:2px;
+  margin-bottom:14px;
+}
+.comp-card h4{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.05rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:0.04em;
+  color:#fff;margin-bottom:10px;
+}
+.comp-card p{font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.75;}
+
+/* ═══ PROMISE STRIP ═══ */
+.promise-strip{
+  background:var(--navy);
+  padding:0;
+}
+.promise-strip-inner{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0;
+}
+.promise-item{
+  padding:52px 44px;
+  border-right:1px solid rgba(255,255,255,0.1);
+  position:relative;overflow:hidden;
+  transition:background 0.3s;
+}
+.promise-item:last-child{border-right:none;}
+.promise-item:hover{background:rgba(77,184,232,0.12);}
+.promise-icon{font-size:2.6rem;margin-bottom:16px;}
+.promise-item h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.6rem;font-weight:900;
+  text-transform:uppercase;letter-spacing:0.04em;
+  color:#fff;margin-bottom:10px;
+}
+.promise-item p{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.8;}
+.promise-num{
+  position:absolute;right:24px;top:24px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:4rem;font-weight:900;
+  color:rgba(255,255,255,0.05);
+  line-height:1;
+}
+
+/* ═══ INDUSTRIES ═══ */
+.ind-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;margin-top:56px;
+}
+.ind-card{
+  border:2px solid var(--border);
+  padding:36px 28px;border-radius:0;
+  position:relative;overflow:hidden;
+  transition:all 0.3s;
+}
+.ind-card::before{
+  content:'';position:absolute;
+  inset:0;background:var(--navy);
+  transform:scaleY(0);transform-origin:bottom;
+  transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  z-index:0;
+}
+.ind-card:hover::before{transform:scaleY(1);}
+.ind-card:hover .ind-title{color:#fff;}
+.ind-card:hover .ind-text{color:rgba(255,255,255,0.6);}
+.ind-card:hover .ind-icon-wrap{background:rgba(255,255,255,0.1);}
+.ind-card *{position:relative;z-index:1;}
+.ind-icon-wrap{
+  width:54px;height:54px;
+  background:var(--bg-soft);
+  border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;margin-bottom:20px;
+  transition:background 0.3s;
+}
+.ind-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.15rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:0.04em;
+  color:var(--navy);margin-bottom:10px;
+  transition:color 0.3s;
+}
+.ind-text{font-size:0.85rem;color:var(--muted);line-height:1.8;transition:color 0.3s;}
+
+/* ═══ TECHNOLOGY ═══ */
+.tech-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:2px;background:var(--border);
+  border:2px solid var(--navy);
+  margin-top:56px;
+}
+.tech-card{
+  background:#fff;padding:36px 24px;
+  text-align:center;transition:all 0.3s;
+  position:relative;
+}
+.tech-card:hover{background:var(--navy);}
+.tech-card:hover .tech-title{color:#fff;}
+.tech-card:hover .tech-desc{color:rgba(255,255,255,0.5);}
+.tech-card:hover .tech-emoji{filter:none;}
+.tech-top{
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(to right,var(--sky),var(--navy));
+  transform:scaleX(0);transition:transform 0.3s;
+}
+.tech-card:hover .tech-top{transform:scaleX(1);}
+.tech-emoji{font-size:2.2rem;margin-bottom:16px;display:block;}
+.tech-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.95rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:0.06em;
+  margin-bottom:8px;color:var(--navy);
+  transition:color 0.3s;
+}
+.tech-desc{font-size:0.78rem;color:var(--muted);line-height:1.7;transition:color 0.3s;}
+
+/* ═══ TESTIMONIALS ═══ */
+.test-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:24px;margin-top:56px;
+}
+.test-card{
+  background:#fff;
+  border:2px solid var(--border);
+  padding:36px;position:relative;
+  transition:all 0.3s;
+}
+.test-card:hover{border-color:var(--navy);transform:translateY(-4px);box-shadow:0 16px 48px rgba(27,43,107,0.1);}
+.test-stars{display:flex;gap:4px;margin-bottom:16px;}
+.star{color:#f5a623;font-size:1rem;}
+.test-quote{
+  position:absolute;top:24px;right:28px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:5rem;font-weight:900;
+  color:rgba(27,43,107,0.04);line-height:1;
+}
+.test-text{
+  font-size:0.92rem;color:var(--muted);
+  line-height:1.9;margin-bottom:24px;
+  font-style:italic;
+}
+.test-author{display:flex;align-items:center;gap:12px;}
+.test-avatar{
+  width:42px;height:42px;background:var(--navy);
+  border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:1.1rem;flex-shrink:0;
+}
+.test-name{
+  font-family:'Barlow Semi Condensed',sans-serif;
+  font-size:0.9rem;font-weight:700;color:var(--navy);
+  text-transform:uppercase;letter-spacing:0.04em;
+}
+.test-role{font-size:0.75rem;color:var(--muted2);}
+
+/* ═══ ABOUT ═══ */
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.about-visual{position:relative;}
+.founder-card{
+  background:var(--navy);
+  padding:48px 40px;
+  position:relative;overflow:hidden;
+}
+.founder-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:4px;
+  background:linear-gradient(to right,var(--sky),var(--navy));
+}
+.founder-avatar{
+  width:80px;height:80px;
+  background:linear-gradient(135deg,var(--sky),var(--blue));
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.2rem;margin-bottom:24px;
+}
+.founder-name{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.8rem;font-weight:900;
+  text-transform:uppercase;color:#fff;
+  letter-spacing:0.02em;margin-bottom:4px;
+}
+.founder-title{
+  font-size:0.8rem;font-weight:600;
+  color:var(--sky-light);
+  letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:28px;
+}
+.founder-creds{display:flex;flex-direction:column;gap:12px;}
+.cred{
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:0.85rem;color:rgba(255,255,255,0.6);
+  line-height:1.5;
+}
+.cred-dot{
+  width:6px;height:6px;background:var(--sky);
+  border-radius:50%;flex-shrink:0;margin-top:6px;
+}
+.about-content .section-kicker{color:var(--sky2);}
+blockquote{
+  border-left:4px solid var(--sky);
+  padding:16px 24px;
+  margin:28px 0;
+  background:var(--bg-soft);
+  font-size:1rem;font-style:italic;
+  color:var(--navy);line-height:1.8;
+}
+.about-content p{font-size:0.95rem;color:var(--muted);line-height:1.85;margin-bottom:16px;}
+
+/* ═══ FAQ — ACCORDION ═══ */
+.faq-list{margin-top:48px;border-top:2px solid var(--navy);}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{
+  width:100%;background:none;border:none;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 0;cursor:pointer;text-align:left;
+  font-family:'Barlow Semi Condensed',sans-serif;
+  font-size:1rem;font-weight:700;
+  color:var(--navy);text-transform:uppercase;letter-spacing:0.04em;
+  transition:color 0.2s;
+}
+.faq-q:hover{color:var(--sky);}
+.faq-q .faq-icon{
+  width:32px;height:32px;background:var(--navy);
+  border-radius:50%;display:flex;align-items:center;
+  justify-content:center;flex-shrink:0;
+  font-size:1.2rem;color:#fff;
+  transition:all 0.3s;
+}
+.faq-item.open .faq-q .faq-icon{background:var(--red);transform:rotate(45deg);}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.4s ease,padding 0.3s;
+}
+.faq-item.open .faq-a{max-height:400px;}
+.faq-a-inner{
+  padding-bottom:24px;
+  font-size:0.92rem;color:var(--muted);
+  line-height:1.85;padding-right:60px;
+}
+.faq-columns{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0 48px;margin-top:48px;
+}
+
+/* ═══ COVERAGE MAP ═══ */
+.coverage-section{
+  background:var(--navy);padding:90px 5%;
+}
+.coverage-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:start;
+  max-width:1260px;margin:0 auto;
+}
+.coverage-zones{display:flex;flex-direction:column;gap:2px;margin-top:40px;}
+.zone-card{
+  display:grid;grid-template-columns:80px 1fr;
+  gap:0;border:1px solid rgba(255,255,255,0.07);
+  transition:border-color 0.3s;
+}
+.zone-card:hover{border-color:rgba(0,114,255,0.4);}
+.zone-label{
+  background:rgba(255,255,255,0.04);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.68rem;font-weight:800;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--sky-light);writing-mode:vertical-lr;
+  transform:rotate(180deg);padding:16px 0;
+}
+.zone-info{padding:20px 24px;}
+.zone-info h4{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1rem;font-weight:800;
+  text-transform:uppercase;color:#fff;
+  margin-bottom:6px;letter-spacing:0.04em;
+}
+.zone-info p{font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.6;}
+.zone-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.zone-tag{
+  font-size:0.68rem;font-weight:600;
+  letter-spacing:0.06em;
+  color:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.05);
+  padding:3px 9px;border-radius:2px;
+}
+.coverage-visual{
+  position:relative;
+  display:flex;flex-direction:column;gap:20px;
+}
+.cov-stat-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2px;background:rgba(255,255,255,0.05);
+}
+.cov-stat{
+  background:rgba(255,255,255,0.04);
+  padding:28px;text-align:center;
+  border:1px solid rgba(255,255,255,0.05);
+}
+.cov-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:2.4rem;font-weight:900;
+  color:var(--sky-light);letter-spacing:-0.02em;
+  margin-bottom:4px;display:block;
+}
+.cov-label{font-size:0.72rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.08em;}
+.dispatch-card{
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  border:1px solid rgba(77,184,232,0.2);
+  padding:36px;
+  position:relative;overflow:hidden;
+}
+.dispatch-card::before{
+  content:'';position:absolute;
+  right:-30px;top:-30px;
+  width:120px;height:120px;
+  border:2px solid rgba(255,255,255,0.1);
+  border-radius:50%;
+}
+.dc-live{
+  display:flex;align-items:center;gap:8px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.75rem;font-weight:800;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:rgba(255,255,255,0.8);margin-bottom:14px;
+}
+.live-dot{width:8px;height:8px;background:#fff;border-radius:50%;animation:pdot 1.2s infinite;}
+.dispatch-card h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:2rem;font-weight:900;
+  color:#fff;text-transform:uppercase;
+  margin-bottom:6px;
+}
+.dispatch-card .phone{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.8rem;font-weight:900;
+  color:#fff;letter-spacing:0.04em;
+  display:block;margin-bottom:16px;
+}
+.dispatch-card p{font-size:0.82rem;color:rgba(255,255,255,0.7);}
+
+/* ═══ CONTACT ═══ */
+.contact-grid{
+  display:grid;grid-template-columns:1fr 420px;
+  gap:60px;align-items:start;
+}
+.contact-form-wrap{background:#fff;}
+.form-section-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.3rem;font-weight:900;
+  text-transform:uppercase;letter-spacing:0.06em;
+  color:var(--navy);margin-bottom:24px;
+  padding-bottom:16px;border-bottom:2px solid var(--navy);
+  display:flex;align-items:center;gap:12px;
+}
+.form-section-title .urgency{
+  font-size:0.7rem;background:var(--red);color:#fff;
+  padding:3px 10px;border-radius:2px;
+  letter-spacing:0.1em;
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.fg{margin-bottom:16px;}
+.fg label{
+  display:block;font-size:0.72rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:7px;
+}
+.fg input,.fg select,.fg textarea{
+  width:100%;
+  background:var(--bg-soft);border:1.5px solid var(--border);
+  border-radius:0;padding:13px 16px;
+  font-family:'Barlow',sans-serif;font-size:0.92rem;
+  color:var(--navy);outline:none;
+  transition:all 0.2s;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{
+  border-color:var(--sky);background:#fff;
+  box-shadow:0 0 0 3px rgba(0,114,255,0.1);
+}
+.fg select option{background:#fff;color:var(--navy);}
+.fg textarea{min-height:110px;resize:vertical;}
+.urgency-selector{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:8px;margin-bottom:16px;
+}
+.urg-btn{
+  border:1.5px solid var(--border);
+  background:var(--bg-soft);
+  padding:12px 8px;text-align:center;
+  cursor:pointer;transition:all 0.2s;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.78rem;font-weight:800;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--muted);
+}
+.urg-btn:hover,.urg-btn.active{
+  border-color:var(--red);color:var(--red);
+  background:rgba(232,0,45,0.05);
+}
+.urg-btn.stat{border-color:var(--red);color:var(--red);}
+.urg-btn .urg-time{display:block;font-size:0.65rem;font-weight:400;color:var(--muted2);margin-top:3px;text-transform:none;letter-spacing:0;}
+.form-note{
+  font-size:0.75rem;color:var(--muted2);
+  margin-top:14px;line-height:1.7;
+  padding:12px;background:var(--bg-soft);
+  border-left:3px solid var(--border);
+}
+.contact-sidebar{display:flex;flex-direction:column;gap:16px;}
+.cs-card{
+  background:var(--navy);padding:28px;
+  position:relative;overflow:hidden;
+}
+.cs-card::before{
+  content:'';position:absolute;
+  top:0;left:0;bottom:0;width:3px;
+  background:var(--sky);
+}
+.cs-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.68rem;font-weight:800;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--sky-light);margin-bottom:8px;
+}
+.cs-card h4{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.1rem;font-weight:800;
+  text-transform:uppercase;color:#fff;
+  margin-bottom:8px;letter-spacing:0.03em;
+}
+.cs-card p{font-size:0.85rem;color:rgba(255,255,255,0.5);}
+.cs-card a{color:var(--sky-light);text-decoration:none;font-weight:600;}
+.cs-stat-card{
+  background:var(--red);padding:28px;
+  text-align:center;
+}
+.cs-stat-card .live-row{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-bottom:10px;
+  font-size:0.72rem;font-weight:700;letter-spacing:0.14em;
+  text-transform:uppercase;color:rgba(255,255,255,0.8);
+}
+.cs-stat-card h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.6rem;font-weight:900;
+  color:#fff;text-transform:uppercase;margin-bottom:4px;
+}
+.cs-stat-card .num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:2rem;font-weight:900;color:#fff;
+  display:block;margin-bottom:8px;
+}
+.cs-stat-card p{font-size:0.78rem;color:rgba(255,255,255,0.65);}
+.cert-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.cert-badge{
+  background:var(--bg-soft);border:1.5px solid var(--border);
+  padding:12px 8px;text-align:center;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.72rem;font-weight:800;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--navy);
+  display:flex;flex-direction:column;gap:4px;
+  align-items:center;
+}
+.cert-badge .cbi{font-size:1.3rem;}
+
+/* ═══ CTA BAND ═══ */
+.cta-band{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 50%,var(--sky2) 100%);
+  padding:80px 5%;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-band::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    -45deg,transparent,transparent 30px,
+    rgba(255,255,255,0.015) 30px,rgba(255,255,255,0.015) 31px
+  );
+}
+.cta-band h2{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(2.5rem,5vw,4.5rem);
+  font-weight:900;text-transform:uppercase;
+  letter-spacing:-0.01em;color:#fff;
+  margin-bottom:16px;position:relative;
+}
+.cta-band p{
+  font-size:1.05rem;color:rgba(255,255,255,0.55);
+  max-width:500px;margin:0 auto 40px;
+  position:relative;
+}
+.cta-actions{
+  display:flex;gap:16px;justify-content:center;
+  flex-wrap:wrap;position:relative;
+}
+
+/* ═══ FOOTER ═══ */
+footer{background:var(--navy-dark);padding:72px 5% 32px;}
+.footer-inner{max-width:1260px;margin:0 auto;}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:60px;margin-bottom:56px;
+}
+.footer-brand .logo-wrap{margin-bottom:18px;}
+.footer-brand p{
+  font-size:0.88rem;color:rgba(255,255,255,0.4);
+  line-height:1.8;margin-bottom:24px;max-width:280px;
+}
+.footer-badges-row{display:flex;flex-wrap:wrap;gap:8px;}
+.fb{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:5px 12px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.68rem;font-weight:800;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);
+}
+.footer-col h5{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.72rem;font-weight:800;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:rgba(255,255,255,0.3);margin-bottom:18px;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-col a{
+  font-size:0.87rem;color:rgba(255,255,255,0.5);
+  text-decoration:none;transition:color 0.2s;
+  display:flex;align-items:center;gap:8px;
+}
+.footer-col a::before{content:'→';font-size:0.75rem;color:var(--sky);opacity:0;transition:opacity 0.2s;}
+.footer-col a:hover{color:#fff;}
+.footer-col a:hover::before{opacity:1;}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:28px;border-top:1px solid rgba(255,255,255,0.06);
+}
+.footer-bottom p{font-size:0.78rem;color:rgba(255,255,255,0.25);}
+.footer-legal{display:flex;gap:24px;}
+.footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.25);text-decoration:none;}
+.footer-legal a:hover{color:rgba(255,255,255,0.6);}
+
+/* ═══ SCROLL REVEAL ═══ */
+.sr{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.sr.vis{opacity:1;transform:translateY(0);}
+.sr-left{opacity:0;transform:translateX(-28px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.sr-left.vis{opacity:1;transform:translateX(0);}
+.sr-right{opacity:0;transform:translateX(28px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.sr-right.vis{opacity:1;transform:translateX(0);}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:1024px){
+  .hero-stats{display:none;}
+  .video-section-inner,.why-split,.about-grid,.contact-grid,.coverage-inner,.footer-top{grid-template-columns:1fr;}
+  .timeline,.services-grid,.comp-grid,.ind-grid,.tech-grid,.test-grid,.promise-strip-inner,.faq-columns{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}
+}
+@media(max-width:640px){
+  .timeline,.services-grid,.comp-grid,.ind-grid,.tech-grid,.test-grid,.promise-strip-inner,.faq-columns,.form-row,.urgency-selector{grid-template-columns:1fr;}
+  .cov-stat-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- EMERGENCY BAR -->
+<div class="ebar">
+  <span class="pulse-dot"></span>
+  24/7 Emergency Medical Dispatch Active — STAT Response Available Now — Call:
+  <a href="tel:18006334678">1-800-MED-HOST</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo-wrap">
+    <!-- SHIELD LOGO matching brand identity -->
+    <svg class="logo-icon" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Shield outline -->
+      <path d="M26 2L4 11V30C4 42.5 14 53.5 26 58C38 53.5 48 42.5 48 30V11L26 2Z" fill="white" stroke="#1B2B6B" stroke-width="2.5"/>
+      <!-- Shield inner fill -->
+      <path d="M26 7L8 15V30C8 40.5 16 49.5 26 54C36 49.5 44 40.5 44 30V15L26 7Z" fill="#EBF3FB"/>
+      <!-- Center vertical arrow/trident stem -->
+      <rect x="24.5" y="14" width="3" height="26" rx="1.5" fill="#1B2B6B"/>
+      <!-- Arrow head pointing up -->
+      <path d="M26 12L21 19H31L26 12Z" fill="#1B2B6B"/>
+      <!-- Left wing / leaf -->
+      <path d="M24 26C24 26 16 24 15 18C15 18 21 17 24 23V26Z" fill="#4DB8E8" opacity="0.9"/>
+      <!-- Right wing / leaf -->
+      <path d="M28 26C28 26 36 24 37 18C37 18 31 17 28 23V26Z" fill="#4DB8E8" opacity="0.9"/>
+      <!-- Left lower wing -->
+      <path d="M24 33C24 33 17 31 16 26C16 26 21 25 24 30V33Z" fill="#4DB8E8" opacity="0.65"/>
+      <!-- Right lower wing -->
+      <path d="M28 33C28 33 35 31 36 26C36 26 31 25 28 30V33Z" fill="#4DB8E8" opacity="0.65"/>
+    </svg>
+    <div class="logo-text-wrap">
+      <span class="logo-main"><span class="med">Med</span><span class="hoste">Hoste</span></span>
+      <span class="logo-sub">Healthcare Logistics</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#compliance">Compliance</a></li>
+    <li><a href="#technology">Technology</a></li>
+    <li><a href="#coverage">Coverage</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nav-stat">🚨 Request STAT</a></li>
+  </ul>
+</nav>
+
+<!-- HERO WITH YOUTUBE VIDEO -->
+<section class="hero">
+  <div class="video-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/BRZ8X1mn4RY?autoplay=1&mute=1&loop=1&playlist=BRZ8X1mn4RY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      title="MedHoste background video">
+    </iframe>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-stripe"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      DFW's #1 Medical Logistics Partner — HIPAA Certified
+    </div>
+    <h1>
+      Healthcare<br>
+      Logistics<br>
+      <span class="line2">Without</span><br>
+      <span class="accent-word">Compromise.</span>
+    </h1>
+    <p class="hero-sub">
+      HIPAA-compliant, chain-of-custody verified medical courier services across Dallas, Fort Worth &amp; beyond. 24 hours. 7 days. 365 days. No exceptions.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-red">🚨 Request STAT Pickup</a>
+      <a href="#services" class="btn-outline">View Services →</a>
+    </div>
+  </div>
+
+  <!-- Stats strip at bottom of hero -->
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hs-num" data-count="24">0</div>
+      <div class="hs-label">Hour<br>Dispatch</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-num" data-count="100">0</div>
+      <div class="hs-label">% Chain of<br>Custody Verified</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-num">DFW+</div>
+      <div class="hs-label">Primary<br>Coverage Zone</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-num" data-count="6">0</div>
+      <div class="hs-label">Active<br>Certifications</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-num">&lt;60</div>
+      <div class="hs-label">Min STAT<br>Response</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <!-- Repeated twice for seamless loop -->
+    <div class="ticker-item"><span class="ti">🔒</span> <b>HIPAA Compliant</b></div>
+    <div class="ticker-item"><span class="ti">🧬</span> Bloodborne Pathogen Certified</div>
+    <div class="ticker-item"><span class="ti">⚡</span> <b>24/7 STAT Dispatch</b></div>
+    <div class="ticker-item"><span class="ti">📋</span> Chain-of-Custody Verified</div>
+    <div class="ticker-item"><span class="ti">⚠️</span> OSHA & HazCom Certified</div>
+    <div class="ticker-item"><span class="ti">🛡️</span> <b>Fully Insured</b></div>
+    <div class="ticker-item"><span class="ti">🌡️</span> Temperature-Controlled</div>
+    <div class="ticker-item"><span class="ti">📡</span> Real-Time GPS Tracking</div>
+    <div class="ticker-item"><span class="ti">✅</span> <b>Digital Proof of Delivery</b></div>
+    <div class="ticker-item"><span class="ti">🔬</span> Lab Specimen Transport</div>
+    <!-- duplicate -->
+    <div class="ticker-item"><span class="ti">🔒</span> <b>HIPAA Compliant</b></div>
+    <div class="ticker-item"><span class="ti">🧬</span> Bloodborne Pathogen Certified</div>
+    <div class="ticker-item"><span class="ti">⚡</span> <b>24/7 STAT Dispatch</b></div>
+    <div class="ticker-item"><span class="ti">📋</span> Chain-of-Custody Verified</div>
+    <div class="ticker-item"><span class="ti">⚠️</span> OSHA & HazCom Certified</div>
+    <div class="ticker-item"><span class="ti">🛡️</span> <b>Fully Insured</b></div>
+    <div class="ticker-item"><span class="ti">🌡️</span> Temperature-Controlled</div>
+    <div class="ticker-item"><span class="ti">📡</span> Real-Time GPS Tracking</div>
+    <div class="ticker-item"><span class="ti">✅</span> <b>Digital Proof of Delivery</b></div>
+    <div class="ticker-item"><span class="ti">🔬</span> Lab Specimen Transport</div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="inner">
+    <div class="sr">
+      <div class="section-kicker">Simple Process</div>
+      <div class="section-title">How MedHoste Works</div>
+      <p class="section-sub">From the moment you request pickup to verified delivery — every step is secure, tracked, and documented. No gaps. No guesswork.</p>
+    </div>
+    <div class="timeline sr">
+      <div class="tl-step">
+        <div class="tl-num">01</div>
+        <div class="tl-icon">📲</div>
+        <h3>Request Pickup</h3>
+        <p>Submit online, via secure portal, or call dispatch directly. Provide item type, urgency level, and any special handling requirements. STAT requests dispatched within minutes.</p>
+        <div class="tl-connector">→</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-num">02</div>
+        <div class="tl-icon">🚐</div>
+        <h3>Secure Transport</h3>
+        <p>A certified MedHoste courier is dispatched immediately. Your item is secured, logged, temperature-monitored if required, and tracked in real-time throughout transit.</p>
+        <div class="tl-connector">→</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-num">03</div>
+        <div class="tl-icon">✅</div>
+        <h3>Verified Delivery</h3>
+        <p>Delivery confirmed with timestamp, GPS stamp, recipient signature, and digital proof of delivery. Full chain-of-custody documentation available for audit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-alt" id="services">
+  <div class="inner">
+    <div class="sr">
+      <div class="section-kicker">Our Services</div>
+      <div class="section-title">Precision Logistics for Every Healthcare Need</div>
+      <p class="section-sub">Every service built from the ground up for medicine — not adapted from general delivery. Designed around compliance, timing, and safety.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card sr">
+        <div class="svc-header">
+          <div class="svc-icon">⚡</div>
+          <span class="svc-tag">Most Urgent</span>
+        </div>
+        <h3>STAT Emergency Courier</h3>
+        <p>Immediate dispatch for time-critical medical deliveries. 24/7/365 with no after-hours surcharges. Emergency calls receive instant priority dispatch — no hold queues, no delays.</p>
+        <ul class="svc-features">
+          <li>Response initiated within minutes of confirmed request</li>
+          <li>Real-time ETA communication throughout</li>
+          <li>No after-hours surcharge in primary DFW zone</li>
+          <li>Escalation protocol active on every STAT run</li>
+        </ul>
+      </div>
+      <div class="svc-card sr">
+        <div class="svc-header">
+          <div class="svc-icon">🔄</div>
+          <span class="svc-tag">Recurring</span>
+        </div>
+        <h3>Scheduled Route Logistics</h3>
+        <p>Consistent, reliable recurring routes with set windows, documented procedures, and couriers familiar with your facilities. Your logistics partner — not just a delivery service.</p>
+        <ul class="svc-features">
+          <li>Daily or custom recurring route cadence</li>
+          <li>Dedicated couriers who know your facility</li>
+          <li>Documented SOPs for each client location</li>
+          <li>Predictable scheduling with full flexibility</li>
+        </ul>
+      </div>
+      <div class="svc-card sr">
+        <div class="svc-header">
+          <div class="svc-icon">🧪</div>
+          <span class="svc-tag">Certified</span>
+        </div>
+        <h3>Lab & Specimen Transport</h3>
+        <p>BBP-certified handling for blood, biopsies, tissue, DNA, and cytology. Unbroken chain-of-custody from collection to laboratory — critical for diagnostic accuracy.</p>
+        <ul class="svc-features">
+          <li>Bloodborne pathogen certified couriers</li>
+          <li>Proper biohazard containment throughout</li>
+          <li>Temperature integrity logged end-to-end</li>
+          <li>Audit-ready documentation every run</li>
+        </ul>
+      </div>
+      <div class="svc-card sr">
+        <div class="svc-header">
+          <div class="svc-icon">💊</div>
+          <span class="svc-tag">Regulated</span>
+        </div>
+        <h3>Pharmaceutical Delivery</h3>
+        <p>Secure, compliant transport of prescription medications and pharmaceutical products. Regulatory compliance embedded in every pickup, transit, and delivery confirmation.</p>
+        <ul class="svc-features">
+          <li>Secure containment for all pharmaceutical cargo</li>
+          <li>Chain-of-custody for controlled substances</li>
+          <li>Temperature-sensitive handling as required</li>
+          <li>Full documentation for regulatory audits</li>
+        </ul>
+      </div>
+      <div class="svc-card sr">
+        <div class="svc-header">
+          <div class="svc-icon">🌡️</div>
+          <span class="svc-tag">Cold Chain</span>
+        </div>
+        <h3>Temperature-Controlled Logistics</h3>
+        <p>Ambient, refrigerated (2–8°C), and frozen cold chain solutions. All temperature conditions logged and documented throughout transit for complete compliance records.</p>
+        <ul class="svc-features">
+          <li>Insulated containers and gel-pack solutions</li>
+          <li>Continuous temperature monitoring</li>
+          <li>Ambient, refrigerated, and frozen options</li>
+          <li>Temperature logs included with every delivery</li>
+        </ul>
+      </div>
+      <div class="svc-card sr">
+        <div class="svc-header">
+          <div class="svc-icon">🔧</div>
+          <span class="svc-tag">Insured</span>
+        </div>
+        <h3>Medical Equipment Delivery</h3>
+        <p>Safe, fully insured transport of surgical instruments, medical devices, sterile supply kits, and high-value clinical equipment. Handled with the precision your equipment demands.</p>
+        <ul class="svc-features">
+          <li>Cargo liability insurance on all equipment</li>
+          <li>Secure, purpose-specific transport containers</li>
+          <li>Sterile supply chain protocols observed</li>
+          <li>White-glove handling for sensitive devices</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO FEATURE SECTION -->
+<div class="video-section">
+  <div class="video-section-inner">
+    <div class="video-panel">
+      <iframe
+        src="https://www.youtube.com/embed/BRZ8X1mn4RY?controls=1&rel=0&modestbranding=1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        title="MedHoste Medical Logistics">
+      </iframe>
+    </div>
+    <div class="video-info sr-right">
+      <div class="section-kicker">See It In Action</div>
+      <div class="section-title">Medical Responsibility. Every Mile.</div>
+      <p>Where most courier companies deliver packages, MedHoste delivers medical responsibility. Watch how our certified couriers handle every pickup, transit, and delivery with the precision healthcare demands.</p>
+      <p>Every run is a commitment to the patient waiting on the other end. That's not marketing — that's how we operate.</p>
+      <a href="#contact" class="btn-red" style="margin-top:8px;display:inline-flex;">Schedule Your First Pickup →</a>
+      <div class="video-stats">
+        <div class="vs-box">
+          <div class="vs-num">24/7</div>
+          <div class="vs-label">Dispatch Available</div>
+        </div>
+        <div class="vs-box">
+          <div class="vs-num">100%</div>
+          <div class="vs-label">Chain-of-Custody Logged</div>
+        </div>
+        <div class="vs-box">
+          <div class="vs-num">DFW</div>
+          <div class="vs-label">Primary Service Area</div>
+        </div>
+        <div class="vs-box">
+          <div class="vs-num">0</div>
+          <div class="vs-label">After-Hours Surcharges</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY MEDHOSTE -->
+<section class="section" id="why">
+  <div class="inner">
+    <div class="why-split">
+      <div class="why-left sr-left">
+        <div class="section-kicker">Why MedHoste</div>
+        <div class="section-title">We Don't Just Move Packages. We Carry Responsibility.</div>
+        <p class="section-sub">Healthcare providers trust MedHoste because we were built from inside healthcare — not adapted from general logistics with a medical brochure attached.</p>
+        <div class="why-features">
+          <div class="why-feat">
+            <div class="wf-icon">🏛️</div>
+            <div>
+              <h4>Built From Inside Healthcare</h4>
+              <p>Founded by a healthcare professional with direct institutional experience inside Texas Health & Human Services — understanding exactly what was missing from medical logistics.</p>
+            </div>
+          </div>
+          <div class="why-feat">
+            <div class="wf-icon">📜</div>
+            <div>
+              <h4>Compliance Is Our Culture</h4>
+              <p>HIPAA, OSHA, BBP, and chain-of-custody standards aren't checkbox items. They're embedded in every process, every driver, every delivery we make.</p>
+            </div>
+          </div>
+          <div class="why-feat">
+            <div class="wf-icon">📡</div>
+            <div>
+              <h4>Full Transparency, Every Step</h4>
+              <p>Real-time GPS, digital proof of delivery, and complete audit-ready documentation available for every single run. Nothing hidden. Nothing missed.</p>
+            </div>
+          </div>
+          <div class="why-feat">
+            <div class="wf-icon">🕐</div>
+            <div>
+              <h4>True 24/7 — No Exceptions</h4>
+              <p>No voicemail. No surcharges. A real person picks up when healthcare emergencies don't wait — because neither do we. Nights, weekends, holidays.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-right sr-right">
+        <div class="stat-block">
+          <span class="sb-num" data-count="24">0</span>
+          <div class="sb-label">Hour Dispatch Availability</div>
+          <div class="sb-desc">No after-hours voicemail. No service windows. Always live.</div>
+        </div>
+        <div class="stat-block">
+          <span class="sb-num">100%</span>
+          <div class="sb-label">Chain-of-Custody Verified</div>
+          <div class="sb-desc">Every delivery logged from pickup to confirmed receipt.</div>
+        </div>
+        <div class="stat-block">
+          <span class="sb-num">$0</span>
+          <div class="sb-label">After-Hours Emergency Surcharges</div>
+          <div class="sb-desc">Healthcare doesn't stop. Our pricing doesn't punish you for it.</div>
+        </div>
+        <div class="stat-block">
+          <span class="sb-num" data-count="6">0</span>
+          <div class="sb-label">Active Safety Certifications</div>
+          <div class="sb-desc">HIPAA · OSHA · BBP · HazCom · Chain-of-Custody · Infection Control</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE STRIP -->
+<div class="promise-strip">
+  <div class="promise-strip-inner">
+    <div class="promise-item sr">
+      <div class="promise-num">01</div>
+      <div class="promise-icon">⚡</div>
+      <h3>Always On Time</h3>
+      <p>Proactive dispatch monitoring on every active run. We identify risk in transit and act before it becomes a critical failure — not after.</p>
+    </div>
+    <div class="promise-item sr">
+      <div class="promise-num">02</div>
+      <div class="promise-icon">🔒</div>
+      <h3>Always Compliant</h3>
+      <p>Every certification held. Every protocol followed. Every delivery protected. Compliance is our standard — not our sales pitch. We don't post credentials we don't hold.</p>
+    </div>
+    <div class="promise-item sr">
+      <div class="promise-num">03</div>
+      <div class="promise-icon">📞</div>
+      <h3>Always Reachable</h3>
+      <p>Real people. Real answers. Real accountability. 24 hours, 7 days, 365 days without exception. When you call, someone answers ready to help.</p>
+    </div>
+  </div>
+</div>
+
+<!-- INDUSTRIES -->
+<section class="section section-alt" id="industries">
+  <div class="inner">
+    <div class="sr">
+      <div class="section-kicker">Industries We Serve</div>
+      <div class="section-title">Purpose-Built for Every Corner of Healthcare</div>
+      <p class="section-sub">We don't offer generic delivery with a medical brochure. Each industry has specific transport requirements, regulatory standards, and timing demands — we build around them.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card sr">
+        <div class="ind-icon-wrap">🏥</div>
+        <div class="ind-title">Hospitals & Health Systems</div>
+        <div class="ind-text">Time-sensitive inter-facility transport, specimen routing, supply chain logistics — all built around hospital compliance standards and clinical timing requirements.</div>
+      </div>
+      <div class="ind-card sr">
+        <div class="ind-icon-wrap">🔬</div>
+        <div class="ind-title">Laboratories & Diagnostic Centers</div>
+        <div class="ind-text">Precision specimen transport with unbroken chain-of-custody from collection site to lab. Critical for diagnostic accuracy — zero margin for error.</div>
+      </div>
+      <div class="ind-card sr">
+        <div class="ind-icon-wrap">💊</div>
+        <div class="ind-title">Pharmacies & Pharmaceutical</div>
+        <div class="ind-text">Secure, temperature-managed pharmaceutical delivery. Regulatory compliance embedded in every pickup, transit, and delivery documentation.</div>
+      </div>
+      <div class="ind-card sr">
+        <div class="ind-icon-wrap">🏨</div>
+        <div class="ind-title">Surgery Centers & Clinics</div>
+        <div class="ind-text">Sterile supply delivery, specimen transport, and instrument logistics timed to surgical schedules. Zero tolerance for delays that impact patient care.</div>
+      </div>
+      <div class="ind-card sr">
+        <div class="ind-icon-wrap">🔧</div>
+        <div class="ind-title">Medical Device Companies</div>
+        <div class="ind-text">Safe, fully insured delivery of high-value medical devices and equipment. White-glove handling, cargo liability coverage, and complete delivery documentation.</div>
+      </div>
+      <div class="ind-card sr">
+        <div class="ind-icon-wrap">🧫</div>
+        <div class="ind-title">Clinical Research Organizations</div>
+        <div class="ind-text">Chain-of-custody compliant transport for research specimens and clinical trial materials requiring rigorous documentation and temperature integrity.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section class="section section-dark" id="compliance">
+  <div class="inner">
+    <div class="sr">
+      <div class="section-kicker" style="color:var(--sky);"><span style="background:var(--sky);display:inline-block;width:24px;height:2px;margin-right:8px;vertical-align:middle;"></span>Compliance & Safety</div>
+      <div class="section-title">Compliance Is Our Culture. Not a Checkbox.</div>
+      <p class="section-sub" style="color:rgba(255,255,255,0.5);">Every driver certified. Every process documented. Every delivery protected. Below is a full accounting of how we protect your materials, your patients, and your organization.</p>
+    </div>
+    <div class="comp-grid sr">
+      <div class="comp-card">
+        <div class="comp-icon">🔒</div>
+        <div class="comp-badge">Certified</div>
+        <h4>HIPAA</h4>
+        <p>All couriers trained in HIPAA privacy practices. PHI handled per Business Associate standards. We treat PHI with the same rigor as clinical staff.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">🧬</div>
+        <div class="comp-badge">Certified</div>
+        <h4>Bloodborne Pathogen</h4>
+        <p>All drivers hold current BBP certification. Proper PPE protocols and exposure prevention procedures followed on every specimen run.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">⚠️</div>
+        <div class="comp-badge">Certified</div>
+        <h4>OSHA & HazCom</h4>
+        <p>Hazardous material communication standards embedded in driver training and transport protocols for every hazardous payload classification.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">🏥</div>
+        <div class="comp-badge">Protocol</div>
+        <h4>Infection Control</h4>
+        <p>Standardized containment procedures, proper biohazard packaging, and infection prevention training for all personnel before deployment.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">📋</div>
+        <div class="comp-badge">Every Run</div>
+        <h4>Chain of Custody</h4>
+        <p>Complete chain-of-custody records: pickup log, GPS transit record, timestamped delivery, electronic signature. Audit-ready upon request.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">🔍</div>
+        <div class="comp-badge">Pre-Deploy</div>
+        <h4>Driver Vetting</h4>
+        <p>Criminal background screening, defensive driving verification, and comprehensive compliance orientation before any courier is activated.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">🛡️</div>
+        <div class="comp-badge">Active</div>
+        <h4>Insurance Coverage</h4>
+        <p>Commercial auto and cargo liability insurance designed specifically for medical logistics. Certificate of Insurance available on request.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">🌡️</div>
+        <div class="comp-badge">Documented</div>
+        <h4>Temperature Control</h4>
+        <p>All temperature-sensitive transports logged, monitored, and documented throughout transit. Full audit trail from departure to delivery.</p>
+      </div>
+    </div>
+    <p style="margin-top:36px;font-size:0.82rem;color:rgba(255,255,255,0.35);max-width:640px;font-style:italic;">
+      Every certification listed is held by MedHoste leadership and applied to all operations. We do not post credentials we do not hold. Compliance inquiries: <a href="/cdn-cgi/l/email-protection#14777b7964787d757a7771547971707c7b6760713a777b79" style="color:var(--sky-light);"><span class="__cf_email__" data-cfemail="096a666479656068676a6c49646c6d61667a7d6c276a6664">[email&#160;protected]</span></a>
+    </p>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="section" id="technology">
+  <div class="inner">
+    <div class="sr">
+      <div class="section-kicker">Technology & Tracking</div>
+      <div class="section-title">Live Tracking. Verified Delivery. Full Visibility.</div>
+      <p class="section-sub">Our logistics platform gives you full visibility from dispatch confirmation to verified delivery — every step logged, every handoff documented, every delivery confirmed digitally.</p>
+    </div>
+    <div class="tech-grid sr">
+      <div class="tech-card">
+        <div class="tech-top"></div>
+        <span class="tech-emoji">📡</span>
+        <div class="tech-title">Real-Time GPS</div>
+        <div class="tech-desc">Live courier location from pickup to delivery. Visible in your client portal at any time during transit.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-top"></div>
+        <span class="tech-emoji">📱</span>
+        <div class="tech-title">Digital Proof of Delivery</div>
+        <div class="tech-desc">Timestamp, GPS stamp, recipient name, electronic signature, and optional photo confirmation auto-sent on delivery.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-top"></div>
+        <span class="tech-emoji">🔔</span>
+        <div class="tech-title">Automated Alerts</div>
+        <div class="tech-desc">Proactive notifications at every milestone — dispatch, pickup, in-transit, and delivery confirmation.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-top"></div>
+        <span class="tech-emoji">🗄️</span>
+        <div class="tech-title">Secure Dispatch Log</div>
+        <div class="tech-desc">Every dispatch action time-stamped and logged. Full audit-ready records available on demand for compliance officers.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-top"></div>
+        <span class="tech-emoji">🖥️</span>
+        <div class="tech-title">Client Portal</div>
+        <div class="tech-desc">Secure dashboard for active tracking, delivery history, documentation download, and new pickup requests.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-alt">
+  <div class="inner">
+    <div class="sr">
+      <div class="section-kicker">Client Trust</div>
+      <div class="section-title">What Healthcare Teams Say</div>
+      <p class="section-sub">Real feedback from the facilities, laboratories, and pharmacies that trust MedHoste with their most critical transport needs.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card sr">
+        <div class="test-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="test-quote">"</div>
+        <p class="test-text">We switched to MedHoste after a series of compliance failures with our previous courier. The difference is night and day. Every specimen arrives with full chain-of-custody documentation — our compliance officer was impressed from day one.</p>
+        <div class="test-author">
+          <div class="test-avatar">👩‍⚕️</div>
+          <div>
+            <div class="test-name">Dr. M. Rodriguez</div>
+            <div class="test-role">Laboratory Director, DFW Diagnostic Center</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card sr">
+        <div class="test-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="test-quote">"</div>
+        <p class="test-text">We called MedHoste at 2am for a STAT run. Someone answered immediately, dispatch was initiated within minutes, and we had real-time tracking the entire time. That's the partner we needed. No one else handles our critical transport.</p>
+        <div class="test-author">
+          <div class="test-avatar">💊</div>
+          <div>
+            <div class="test-name">Sarah K.</div>
+            <div class="test-role">Pharmacy Operations Manager, Fort Worth</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card sr">
+        <div class="test-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="test-quote">"</div>
+        <p class="test-text">What sets MedHoste apart is that they actually understand healthcare. The courier who services our facility knows our protocols, our staff, and treats every pickup like it matters — because it does. This is a true logistics partnership.</p>
+        <div class="test-author">
+          <div class="test-avatar">🏥</div>
+          <div>
+            <div class="test-name">James T.</div>
+            <div class="test-role">Clinical Director, Outpatient Surgery Center</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="about-visual sr-left">
+        <div class="founder-card">
+          <div class="founder-avatar">👨‍💼</div>
+          <div class="founder-name">Clement A. Omoh</div>
+          <div class="founder-title">Founder & Principal — MedHoste Healthcare Logistics</div>
+          <div class="founder-creds">
+            <div class="cred"><div class="cred-dot"></div>Organizational Learning & Performance Specialist</div>
+            <div class="cred"><div class="cred-dot"></div>MS Strategic Innovation & Change Management — University of Denver</div>
+            <div class="cred"><div class="cred-dot"></div>Direct institutional experience — Texas Health & Human Services</div>
+            <div class="cred"><div class="cred-dot"></div>HIPAA · OSHA · BBP — every credential personally held and applied</div>
+            <div class="cred"><div class="cred-dot"></div>Systems-thinking approach to compliance-structured logistics design</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content sr-right">
+        <div class="section-kicker">About MedHoste</div>
+        <div class="section-title">Built by a Healthcare Professional. Not Just a Logistics Company.</div>
+        <blockquote>
+          "MedHoste exists because healthcare deserves more than a generic courier. It deserves a partner who understands what is actually inside that transport container — and what it means to the patient waiting on the other end."
+        </blockquote>
+        <p>MedHoste was founded by Clement A. Omoh — not by someone who discovered medical delivery as a business opportunity, but by someone who spent years <em>inside</em> healthcare systems and understood exactly what was missing.</p>
+        <p>His academic foundation — an MS in Strategic Innovation & Change Management from the University of Denver — gives him the systems-thinking approach to build MedHoste not as a collection of delivery runs, but as an operationally designed, compliance-structured, scalable healthcare logistics organization.</p>
+        <p>Every protocol was chosen deliberately. Every certification was earned. Every standard applied was built by someone who has seen what happens when those standards are absent in a healthcare environment.</p>
+        <p>When you partner with MedHoste, you are not handing your critical transport to a general courier who added a medical page to their website. You are working with a healthcare logistics company built from the inside out.</p>
+        <a href="#contact" class="btn-red" style="margin-top:8px;display:inline-flex;">Partner With MedHoste →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="coverage-section" id="coverage">
+  <div class="coverage-inner">
+    <div class="sr-left">
+      <div class="section-kicker" style="color:var(--sky);"><span style="background:var(--sky);display:inline-block;width:24px;height:2px;margin-right:8px;vertical-align:middle;"></span>Service Coverage</div>
+      <div class="section-title" style="color:#fff;">DFW-Based. Healthcare-Focused. Expanding Reach.</div>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.8;margin-bottom:36px;">MedHoste's primary service zone covers the full Dallas-Fort Worth Metroplex — one of the most medically dense regions in the United States. Extended coverage reaches strategic healthcare corridors beyond DFW.</p>
+      <div class="coverage-zones">
+        <div class="zone-card">
+          <div class="zone-label">Primary</div>
+          <div class="zone-info">
+            <h4>Dallas Metro</h4>
+            <p>Full Dallas coverage including surrounding medical districts and healthcare corridors.</p>
+            <div class="zone-tags">
+              <span class="zone-tag">Downtown Dallas</span>
+              <span class="zone-tag">Medical District</span>
+              <span class="zone-tag">Plano</span>
+              <span class="zone-tag">Garland</span>
+              <span class="zone-tag">Richardson</span>
+              <span class="zone-tag">Carrollton</span>
+            </div>
+          </div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-label">Primary</div>
+          <div class="zone-info">
+            <h4>Fort Worth Metroplex</h4>
+            <p>Complete Fort Worth and surrounding cities with full healthcare facility access.</p>
+            <div class="zone-tags">
+              <span class="zone-tag">Fort Worth</span>
+              <span class="zone-tag">Arlington</span>
+              <span class="zone-tag">Grand Prairie</span>
+              <span class="zone-tag">Irving</span>
+              <span class="zone-tag">Frisco</span>
+              <span class="zone-tag">McKinney</span>
+            </div>
+          </div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-label">Extended</div>
+          <div class="zone-info">
+            <h4>Waco Corridor & I-35</h4>
+            <p>Extended coverage along the I-35 healthcare artery connecting DFW to Central Texas.</p>
+            <div class="zone-tags">
+              <span class="zone-tag">Waco</span>
+              <span class="zone-tag">I-35 Corridor</span>
+              <span class="zone-tag">Denton</span>
+              <span class="zone-tag">Lewisville</span>
+            </div>
+          </div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-label">Custom</div>
+          <div class="zone-info">
+            <h4>Custom Route Inquiry</h4>
+            <p>Outside our primary zone? MedHoste welcomes custom route discussions for your specific logistics needs.</p>
+            <div class="zone-tags">
+              <span class="zone-tag">Contact Operations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="coverage-visual sr-right">
+      <div class="cov-stat-grid">
+        <div class="cov-stat">
+          <span class="cov-num">30+</span>
+          <div class="cov-label">Cities Covered</div>
+        </div>
+        <div class="cov-stat">
+          <span class="cov-num">24/7</span>
+          <div class="cov-label">Dispatch Active</div>
+        </div>
+        <div class="cov-stat">
+          <span class="cov-num">&lt;60</span>
+          <div class="cov-label">Min STAT Response</div>
+        </div>
+        <div class="cov-stat">
+          <span class="cov-num">365</span>
+          <div class="cov-label">Days Per Year</div>
+        </div>
+      </div>
+      <div class="dispatch-card">
+        <div class="dc-live"><span class="live-dot"></span>Dispatch Line — Active Now</div>
+        <h3>Need Immediate Transport?</h3>
+        <span class="phone">1-800-MED-HOST</span>
+        <p>STAT requests receive immediate dispatch. No hold queues. No voicemail. No after-hours barriers. A real dispatcher answers — always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="inner">
+    <div class="sr">
+      <div class="section-kicker">FAQ</div>
+      <div class="section-title">Every Question. Answered Transparently.</div>
+      <p class="section-sub">Healthcare clients deserve clear, honest answers. These FAQs are designed to address compliance concerns and demonstrate MedHoste's transparency as a true logistics partner.</p>
+    </div>
+    <div class="faq-columns">
+      <div class="faq-list sr-left">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Are you HIPAA compliant? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. MedHoste operates under strict HIPAA Business Associate standards. All drivers are trained in HIPAA privacy practices and understand the handling of Protected Health Information (PHI). Delivery documentation is securely managed, and our digital proof-of-delivery systems prevent unauthorized access at every stage. We treat compliance as a culture, not a checkbox.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do you ensure chain-of-custody integrity? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Every MedHoste transport includes a complete, documented chain-of-custody record: logged pickup time and location, verified sender identification, secure containment confirmation, GPS-tracked transit record, timestamped delivery confirmation, and electronic signature of authorized recipient. Full documentation available for audit purposes upon request.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What happens if a delivery is delayed? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">We operate proactive dispatch monitoring on every active run. If a delay risk is detected: dispatch intervenes immediately, the client is notified proactively, an alternate routing solution is initiated, and our escalation protocol begins. We do not wait for a problem to surface. We identify risk in transit and act before it becomes a critical failure.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Are your drivers background checked? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Every MedHoste courier undergoes rigorous pre-deployment qualification: criminal background screening, defensive driving certification, Bloodborne Pathogen training, infection control protocol training, HIPAA awareness training, and professional conduct orientation. No driver is activated without completing all requirements.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do you provide temperature-controlled transport? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. We offer insulated containers, gel pack refrigerated solutions, and temperature-sensitive handling protocols. Available ranges: Ambient (room temperature), Refrigerated (2–8°C), and frozen cold solutions. Specific requirements must be communicated at scheduling so we can prepare appropriate containment equipment.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Are you insured? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. MedHoste carries commercial auto liability insurance and cargo liability coverage designed specifically for medical logistics operations. Certificate of Insurance is available to authorized procurement contacts and compliance officers upon request.</div></div>
+        </div>
+      </div>
+      <div class="faq-list sr-right">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do you offer 24/7 emergency STAT delivery? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. MedHoste provides 24/7 STAT medical courier services with no after-hours surcharge for emergency activations within our primary coverage zone. Emergency calls receive immediate dispatch priority. Healthcare emergencies do not operate on a business-hours schedule — and neither do we.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is delivery confirmed? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Every completed delivery generates a full Digital Proof of Delivery (POD) record: timestamp of delivery, GPS location stamp, name of authorized recipient, electronic signature, optional photo confirmation, and automatic client notification sent upon delivery completion.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What medical items do you transport? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">MedHoste transports: laboratory specimens (blood, biopsies, tissue, DNA, cytology), pharmaceuticals and prescription medications, medical equipment and surgical instruments, sterile supply kits, radiology and imaging materials, medical records and confidential health documentation, clinical trial materials, and hazardous/biohazardous materials (with advance classification disclosure required).</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do you provide recurring scheduled route services? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Scheduled route logistics is a core MedHoste service. We work with hospitals, laboratories, pharmacies, and long-term care facilities to establish consistent daily or recurring routes — with set windows, documented procedures, and trained couriers who become familiar with your facilities and operational requirements.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What geographic areas do you cover? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Primary: Dallas, Fort Worth, and the full DFW Metroplex including Plano, Irving, Arlington, Frisco, Garland, McKinney, Carrollton, Grand Prairie, Mesquite, Richardson, Denton, Lewisville, and surrounding cities. Extended: Waco corridor and the I-35 healthcare artery. Custom routes available — contact us to discuss.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do we start service with MedHoste? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Starting is straightforward: submit a pickup request or consultation inquiry using our online form, call our dispatch line directly at 1-800-MED-HOST, request a scheduled route consultation, or email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a3a2b383e242f383922233a390a272f2e2225393e2f64292527">[email&#160;protected]</a> for enterprise onboarding. New client partnerships are typically activated within 24–48 hours of initial inquiry.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-alt" id="contact">
+  <div class="inner">
+    <div class="sr">
+      <div class="section-kicker">Request Service</div>
+      <div class="section-title">Ready to Work With MedHoste?</div>
+      <p class="section-sub">Submit a pickup request, schedule a recurring route, or speak with our dispatch team. STAT requests are dispatched immediately upon confirmation.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="sr-left">
+        <div class="form-section-title">
+          Pickup Request Form
+          <span class="urgency">HIPAA Secure</span>
+        </div>
+
+        <!-- Urgency Selector -->
+        <div style="margin-bottom:18px;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Select Urgency Level</div>
+          <div class="urgency-selector">
+            <div class="urg-btn stat active" onclick="selectUrg(this)">🚨 STAT<span class="urg-time">Within 1 Hour</span></div>
+            <div class="urg-btn" onclick="selectUrg(this)">⚡ Urgent<span class="urg-time">2–4 Hours</span></div>
+            <div class="urg-btn" onclick="selectUrg(this)">📦 Same-Day<span class="urg-time">Today</span></div>
+            <div class="urg-btn" onclick="selectUrg(this)">🔄 Scheduled<span class="urg-time">Recurring Route</span></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="First Name"></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Last Name"></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Email Address</label><input type="email" placeholder="you@facility.com"></div>
+          <div class="fg"><label>Phone Number</label><input type="tel" placeholder="(214) 000-0000"></div>
+        </div>
+        <div class="fg"><label>Healthcare Facility / Organization</label><input type="text" placeholder="e.g. DFW Medical Center"></div>
+        <div class="form-row">
+          <div class="fg">
+            <label>Service Type</label>
+            <select>
+              <option>STAT Emergency Run — Within 1 Hour</option>
+              <option>Urgent Delivery — Within 2-4 Hours</option>
+              <option>Standard Same-Day Pickup</option>
+              <option>Scheduled Recurring Route</option>
+              <option>Lab & Specimen Pickup</option>
+              <option>Pharmaceutical Delivery</option>
+              <option>Medical Equipment Transport</option>
+              <option>New Partnership / Consultation</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Temperature Requirement</label>
+            <select>
+              <option>Ambient (Room Temperature)</option>
+              <option>Refrigerated (2–8°C / Cold Pack)</option>
+              <option>Frozen (Dry Ice Required)</option>
+              <option>Not Sure — Please Advise</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg"><label>Pickup Address / Location</label><input type="text" placeholder="Full address or facility name"></div>
+        <div class="fg"><label>Delivery Address / Destination</label><input type="text" placeholder="Recipient facility or address"></div>
+        <div class="fg"><label>Special Handling Instructions</label><textarea placeholder="Describe any special handling requirements, biohazard classification, or other details we should know..."></textarea></div>
+        <button class="btn-red" style="width:100%;justify-content:center;font-size:1rem;padding:18px;" type="button">🚨 Submit Pickup Request</button>
+        <div class="form-note">All information submitted is handled under strict HIPAA-compliant privacy standards. MedHoste does not share, sell, or distribute client information. Standard requests receive a response within 30 minutes during business hours. STAT and Urgent requests receive immediate response.</div>
+        <div class="cert-badges" style="margin-top:20px;">
+          <div class="cert-badge"><span class="cbi">🔒</span>HIPAA Secure</div>
+          <div class="cert-badge"><span class="cbi">🛡️</span>Fully Insured</div>
+          <div class="cert-badge"><span class="cbi">📡</span>GPS Tracked</div>
+          <div class="cert-badge"><span class="cbi">📋</span>Chain of Custody</div>
+          <div class="cert-badge"><span class="cbi">⚡</span>24/7 Dispatch</div>
+          <div class="cert-badge"><span class="cbi">✅</span>Digital POD</div>
+        </div>
+      </div>
+
+      <div class="contact-sidebar sr-right">
+        <div class="cs-stat-card">
+          <div class="live-row"><span class="live-dot"></span>Dispatch Line — Live Now</div>
+          <h3>24/7 Emergency Dispatch</h3>
+          <span class="num">1-800-MED-HOST</span>
+          <p>STAT calls answered immediately. No hold queues. No voicemail. A real dispatcher — always.</p>
+        </div>
+        <div class="cs-card">
+          <div class="cs-label">General Inquiries</div>
+          <h4>Email Us</h4>
+          <p><a href="/cdn-cgi/l/email-protection#7910171f1639141c1d11160a0d1c571a1614"><span class="__cf_email__" data-cfemail="88e1e6eee7c8e5edece0e7fbfceda6ebe7e5">[email&#160;protected]</span></a></p>
+        </div>
+        <div class="cs-card">
+          <div class="cs-label">Enterprise & Partnerships</div>
+          <h4>Healthcare Onboarding</h4>
+          <p><a href="/cdn-cgi/l/email-protection#fc8c9d8e8892998e8f94958c8fbc91999894938f8899d29f9391"><span class="__cf_email__" data-cfemail="b7c7d6c5c3d9d2c5c4dfdec7c4f7dad2d3dfd8c4c3d299d4d8da">[email&#160;protected]</span></a></p>
+          <p style="margin-top:6px;font-size:0.78rem;color:rgba(255,255,255,0.35);">New clients activated within 24–48 hours of inquiry</p>
+        </div>
+        <div class="cs-card">
+          <div class="cs-label">Compliance & Audits</div>
+          <h4>Compliance Officer</h4>
+          <p><a href="/cdn-cgi/l/email-protection#5635393b263a3f37383533163b33323e392522337835393b"><span class="__cf_email__" data-cfemail="5c3f33312c30353d323f391c31393834332f2839723f3331">[email&#160;protected]</span></a></p>
+          <p style="margin-top:6px;font-size:0.78rem;color:rgba(255,255,255,0.35);">Audit-ready documentation available on request</p>
+        </div>
+        <div class="cs-card">
+          <div class="cs-label">Primary Service Zone</div>
+          <h4>Coverage Area</h4>
+          <p style="font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.7;">Dallas · Fort Worth · Plano · Irving · Arlington · Frisco · McKinney · Garland · Carrollton · Waco Corridor · I-35 Extended</p>
+        </div>
+        <div class="cs-card" style="background:var(--bg-soft);border-left-color:var(--navy);">
+          <div class="cs-label" style="color:var(--navy);">Client Portal</div>
+          <h4 style="color:var(--navy);">Existing Clients</h4>
+          <p style="color:var(--muted);">Access your deliveries, documentation, and tracking history via our secure client portal.</p>
+          <a href="#" class="btn-outline" style="margin-top:12px;border-color:var(--navy);color:var(--navy);font-size:0.78rem;padding:8px 20px;display:inline-flex;">Portal Login →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2>Need Immediate<br>Medical Transport?</h2>
+  <p>Our dispatch team is available 24 hours a day, 7 days a week, 365 days a year. Reach us the moment you need us. No hold. No voicemail. No barriers.</p>
+  <div class="cta-actions">
+    <a href="tel:18006334678" class="btn-red" style="font-size:1.1rem;padding:18px 48px;">📞 Call Dispatch Now</a>
+    <a href="#contact" class="btn-outline">Request Online →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo-wrap" style="margin-bottom:18px;display:inline-flex;">
+          <svg class="logo-icon" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 2L4 11V30C4 42.5 14 53.5 26 58C38 53.5 48 42.5 48 30V11L26 2Z" fill="rgba(255,255,255,0.07)" stroke="rgba(77,184,232,0.6)" stroke-width="2.5"/>
+            <path d="M26 7L8 15V30C8 40.5 16 49.5 26 54C36 49.5 44 40.5 44 30V15L26 7Z" fill="rgba(77,184,232,0.08)"/>
+            <rect x="24.5" y="14" width="3" height="26" rx="1.5" fill="rgba(255,255,255,0.8)"/>
+            <path d="M26 12L21 19H31L26 12Z" fill="rgba(255,255,255,0.8)"/>
+            <path d="M24 26C24 26 16 24 15 18C15 18 21 17 24 23V26Z" fill="#4DB8E8" opacity="0.8"/>
+            <path d="M28 26C28 26 36 24 37 18C37 18 31 17 28 23V26Z" fill="#4DB8E8" opacity="0.8"/>
+            <path d="M24 33C24 33 17 31 16 26C16 26 21 25 24 30V33Z" fill="#4DB8E8" opacity="0.5"/>
+            <path d="M28 33C28 33 35 31 36 26C36 26 31 25 28 30V33Z" fill="#4DB8E8" opacity="0.5"/>
+          </svg>
+          <div class="logo-text-wrap">
+            <span class="logo-main" style="font-size:1.4rem;"><span class="med" style="color:#7DCFF2;">Med</span><span class="hoste" style="color:rgba(255,255,255,0.9);">Hoste</span></span>
+            <span class="logo-sub" style="color:rgba(255,255,255,0.35);">Healthcare Logistics</span>
+          </div>
+        </a>
+        <p>Healthcare Logistics Without Compromise. Serving Dallas, Fort Worth, and the DFW Metroplex with HIPAA-compliant, chain-of-custody verified medical courier services — 24/7/365.</p>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.25);font-style:italic;margin-top:-8px;margin-bottom:16px;">Secure. Timely. Compliant.</p>
+        <div class="footer-badges-row">
+          <span class="fb">HIPAA</span><span class="fb">OSHA</span><span class="fb">BBP Certified</span><span class="fb">Fully Insured</span><span class="fb">24/7 Dispatch</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">STAT Emergency Courier</a></li>
+          <li><a href="#services">Scheduled Route Logistics</a></li>
+          <li><a href="#services">Lab & Specimen Transport</a></li>
+          <li><a href="#services">Pharmaceutical Delivery</a></li>
+          <li><a href="#services">Temperature-Controlled</a></li>
+          <li><a href="#services">Medical Equipment Delivery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <ul>
+          <li><a href="#industries">Hospitals & Health Systems</a></li>
+          <li><a href="#industries">Laboratories & Diagnostics</a></li>
+          <li><a href="#industries">Pharmacies</a></li>
+          <li><a href="#industries">Surgery Centers & Clinics</a></li>
+          <li><a href="#industries">Medical Device Companies</a></li>
+          <li><a href="#industries">Clinical Research Orgs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About MedHoste</a></li>
+          <li><a href="#compliance">Compliance & Safety</a></li>
+          <li><a href="#technology">Technology & Tracking</a></li>
+          <li><a href="#coverage">Service Areas</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Request a Pickup</a></li>
+          <li><a href="#">Client Portal Login</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MedHoste Healthcare Logistics. All Rights Reserved. | DFW's Trusted Medical Logistics Partner</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Compliance Statement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Scroll reveal
+const srEls = document.querySelectorAll('.sr, .sr-left, .sr-right');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('vis'), 60);
+      obs.unobserve(e.target);
+    }
+  });
+}, {threshold:0.07});
+srEls.forEach((el,i)=>{
+  el.style.transitionDelay = (i%4)*0.08+'s';
+  obs.observe(el);
+});
+
+// Counter animation
+function animateCount(el) {
+  const target = parseInt(el.getAttribute('data-count'));
+  if(!target) return;
+  let start = 0;
+  const dur = 1800;
+  const step = target / (dur / 16);
+  const timer = setInterval(()=>{
+    start = Math.min(start + step, target);
+    el.textContent = Math.floor(start);
+    if(start >= target) {
+      el.textContent = target;
+      clearInterval(timer);
+    }
+  }, 16);
+}
+const countObs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      animateCount(e.target);
+      countObs.unobserve(e.target);
+    }
+  });
+}, {threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(el=>countObs.observe(el));
+
+// FAQ accordion
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classLi
